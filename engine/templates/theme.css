@@ -1,0 +1,90 @@
+{?primary_color}
+article.state h1{
+  background: {primary_color};
+}
+
+article.state h2{
+  color:{primary_color};
+}
+
+article.state h3{
+  background: {primary_color};
+}
+
+article.state h4{
+  color: {primary_color};
+}
+
+article.state .wrapper{
+  border:2px solid {primary_color};
+}
+
+article.state.intro h1, article.state.intro h2{
+  color: {primary_color};
+}
+
+article.state.outro h1{
+  color: {primary_color};
+}
+
+.question-explanation {
+  color: {primary_color};
+}
+{/primary_color}
+
+{?option_color}
+article.state ul label{
+  background-color: {option_color};
+}
+
+article.state ul li{
+  color: {option_color};
+  border: 1px solid {option_color};
+}
+
+/*.question-reference {
+  color: {option_color};
+}*/
+{/option_color}
+
+
+{?secondary_color}
+article.state.answers.correct li[data-correct=true]{
+  border: 1px solid {secondary_color};
+  color: {secondary_color};
+}
+
+article.state.answers.correct label[data-correct=true] {
+  background-color: {secondary_color};
+}
+
+article.state.intro .welcome{
+  border:2px solid {secondary_color};
+}
+
+article.state.outro .thankyou{
+  border:2px solid {secondary_color};
+}
+{/secondary_color}
+
+{?logo}
+/*article.state {
+  background:url({assets}{logo}) bottom right no-repeat;
+}*/
+{/logo}
+
+{?background_ipad}
+.play-canvas{
+  background:url("{assets}{background_ipad}") bottom right no-repeat;
+  background-size: cover;
+}
+{/background_ipad}
+
+{?background_big}
+  @media only screen and (min-width: 1025px) {
+    .play-canvas{
+      background:url("{assets}{background_big}") bottom right no-repeat;
+      background-size: cover;
+    }
+  }
+{/background_big}

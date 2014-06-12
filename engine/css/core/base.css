@@ -1,0 +1,66 @@
+html,body,div,span,applet,object,iframe,h1,h2,h3,h4,h5,h6,p,blockquote,pre,a,abbr,acronym,address,big,cite,code,del,dfn,em,img,ins,kbd,q,s,samp,small,strike,strong,sub,sup,tt,var,b,u,i,center,dl,dt,dd,ol,ul,li,fieldset,form,label,legend,article,aside,canvas,details,figcaption,figure,footer,header,hgroup,menu,nav,section,summary,time,mark,audio,video{margin:0;padding:0;border:0;font:inherit;vertical-align:baseline}
+html{width:100%;height:100%;font-size:100%;-webkit-text-size-adjust:100%;text-rendering:optimizeLegibility}
+article,aside,details,figcaption,figure,footer,header,hgroup,menu,nav,section{display:block}
+body{width:100%;height:100%;font-size:80%;line-height:1em}
+ol,ul{list-style:none}
+blockquote,q{quotes:none;}
+blockquote:before,q:before,blockquote:after,q:after{content:"";content:none}
+table{border-collapse:collapse;border-spacing:0}
+img{-ms-interpolation-mode:bicubic}
+body{background:#fff;font-family:"Proxima","HelveticaNeue","Helvetica Neue",Helvetica,Arial,"Lucida Grande",sans-serif;-webkit-font-smoothing:antialiased;line-height:1.5em;color:#555;position:relative}
+a{color:#00a6fc;text-decoration:none;line-height:inherit;}
+a:hover{color:#17b0ff}
+a:focus{color:#cc4714;outline:none}
+p a,p a:visited{line-height:inherit}
+ul,ol{margin-bottom:1.5em}
+ul{list-style:none outside;}
+ul.square{list-style:square outside}
+ul.circle{list-style:circle outside}
+ul.disc{list-style:disc outside}
+ol{list-style:decimal}
+ol,ul.square,ul.circle,ul.disc{margin-left:2.5}
+li{margin-bottom:1em}
+ul.large li{line-height:1.75em}
+h1,h2,h3,h4,h5,h6{color:#181818;line-height:1.25em;}
+h1 small,h2 small,h3 small,h4 small,h5 small,h6 small{color:#777}
+h1 a,h2 a,h3 a,h4 a,h5 a,h6 a{font-weight:inherit}
+h6{font-size:1.3em;margin-bottom:.2em}
+h5{font-size:1.6em;margin-bottom:.3em}
+h4{font-size:2em;margin-bottom:.3em}
+h3{font-size:2.4em;margin-bottom:.4em}
+h2{font-size:3.1em;margin-bottom:.5em}
+h1{font-size:3.8em;margin-bottom:.6em}
+.subheader{color:#777;font-weight:300;margin-bottom:2em}
+p{font-size:1.08em;line-height:1.25em;}
+p img{margin:0}
+p.lead{font-size:1.5em;line-height:1.5em}
+em,i{font-style:italic;line-height:inherit}
+strong,b{font-weight:bold;line-height:inherit}
+small{font-size:75%;line-height:inherit}
+blockquote{line-height:.8em;color:#777;margin:0 0 1.5em;padding:.75em 1.66em 0 1.58em;border-left:1px solid #ddd;}
+blockquote p{line-height:1.66em;color:#777}
+blockquote cite{display:block;font-size:.5em;color:#555;}
+blockquote cite:before{content:"— "}
+blockquote cite a,blockquote cite a:visited{color:#555}
+hr{border:solid #ddd;border-width:1px 0 0;clear:both;margin:1em 0 1.5em;height:0}
+abbr,acronym{text-transform:uppercase;font-size:90%;color:#222;border-bottom:1px solid #ddd;cursor:help}
+abbr{text-transform:none}
+.print-only{display:none !important}
+@media print{*{background:transparent !important;color:$black !important;text-shadow:none !important;filter:none !important;-ms-filter:none !important}
+p a,p a:visited{color:#444 !important;text-decoration:underline}
+p a[href]:after{content:" (" attr(href) ")"}
+abbr[title]:after{content:" (" attr(href) ")"}
+.ir a:after,a[href^="javascript:"]:after,a[href^="#"]:after{content:""}
+pre,blockquote{border:solid 1px #999;page-break-inside:avoid}
+thead{display:table-header-group}
+tr,img{page-break-inside:avoid}
+@page{margin:.5cm}
+p,h2,h3{orphans:3;widows:3}
+h2,h3{page-break-after:avoid}
+.hide-on-print{display:none !important}
+.print-only{display:block !important}
+}
+
+.clearer {
+    clear: both;
+}

@@ -1,0 +1,21 @@
+<article class="state answers">
+    <div class="wrapper">
+        <h3 class="question-title">{order_in_set|s}</h3>
+        <h4 class="question-text">
+            {title|s}
+            <div class="clearer">&zwnj;</div>
+        </h4>
+    </div>
+    <ul class="question-options {product_theme}">
+        {#options}
+            <label data-correct="{?correct}true{:else}false{/correct}">{@lcounter}{.}{/lcounter}</label><!-- TODO: create function for label -->
+            <li class="question-option" data-correct="{?correct}true{:else}false{/correct}">
+                {text|s}
+            </li>
+        {/options}
+    </ul>
+    <span class="question-reference">
+        {reference|s}
+    </span>
+    {?logo}<img src="{assets}{logo}" class="logo" />{/logo}
+</article>

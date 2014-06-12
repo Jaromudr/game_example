@@ -1,0 +1,15 @@
+<article class="state outro">
+    <div class="thankyou">
+        <h1>{text|s}</h1>
+            
+        <audio>
+            {?mp3_file}
+                <source src="{assets}{mp3_file}" type="audio/mp3" />
+            {/mp3_file}
+
+            {?ogg_file}
+                <source src="{assets}{ogg_file}" type="audio/ogg" />
+            {/ogg_file}
+        </audio>
+    </div>
+</article>

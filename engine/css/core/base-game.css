@@ -1,0 +1,331 @@
+* {
+  -webkit-tap-highlight-color: rgba(0,0,0,0);
+}
+
+@font-face {
+  font-family: FrutigerRoman;
+  font-style: sans-serif;
+  src: url("Frutiger/FrutigerRoman.ttf");
+  src: url("Frutiger/FrutigerRoman.ttf");
+}
+
+.question-explanation table,
+.question-explanation table td,
+.question-text table,
+.question-text td
+{
+    margin: 0;
+}
+
+body {
+  width:100%;
+  height:100%;
+  margin:0;
+  padding:0;
+  background-repeat: no-repeat;
+  background-position: bottom right;
+  -webkit-touch-callout: none;
+  -webkit-user-select: none;
+  -khtml-user-select: none;
+  -moz-user-select: none;
+  -ms-user-select: none;
+  user-select: none;
+  overflow: hidden;
+}
+
+.fullscreen-enter{
+	position: absolute;
+	z-index: 1000;
+	top: 0;
+	left: 0;
+	bottom: 0;
+	right: 0;
+}
+
+sub,sup {
+  font-size:0.5em;
+}
+
+.play-container {
+  position:relative;
+  margin: 0 auto;
+  width:100%;
+  height:100%;
+}
+
+.play-canvas {
+  width:100%;
+  height:100%;
+  display: table;
+  vertical-align: middle;
+  -webkit-transform: translate3d(0, 0, 0);
+}
+
+article {
+  background-position:top right;
+  background-repeat: no-repeat;
+  display: table-cell;
+  vertical-align: middle;
+  text-align:left;
+}
+
+article.state{
+  text-align: left;
+  margin:auto;
+  padding:5%;
+  -webkit-user-select: none;
+}
+
+article.state h1{
+  background: #4f2d7f; /*  Primary default */
+  font-size: 2em;
+  color: white;
+  padding: 10px 10px 10px 32px;
+  border-top-right-radius: 7px;
+  border-top-left-radius: 7px;
+}
+
+article.state h2{
+  color:#4f2d7f; /*  Primary default */
+  padding: 25px 25px 25px 25px;
+}
+
+article.state h3{
+  background: #4f2d7f; /*  Primary default */
+  color: #ffffff;
+  font-size:2em;
+  border-top-right-radius: 7px;
+  padding: 10px 10px 10px 10px;
+  /*font-weight: bold;*/
+  border-top-left-radius: 7px;
+}
+
+article.state h4{
+  font-size:1.7em;
+  color: #4f2d7f; /*  Primary default */
+  padding: 25px 25px 25px 25px;
+  /*font-weight: bold;*/
+}
+
+article.state .wrapper{
+  background: #ffffff;
+  border-radius: 11px;
+  width:90%;
+  border:2px solid #4f2d7f; /*  Primary default */
+}
+
+article.state ul {
+  max-width:74%;
+}
+
+article.state ul label{
+  background-color: #666; /*  Option default */
+  -webkit-box-shadow: rgba(0, 0, 0, 0.398438) 0px 1px 6px 0px;
+  border-top-right-radius: 6px;
+  position: relative;
+  color: white;
+  -webkit-user-select: none;
+  text-transform: uppercase;
+  padding: 4px 10px 4px 10px;
+  top: 45px;
+  z-index: 1;
+  right: 14px;
+  border-radius: 4px;
+}
+
+article.state ul li{
+  font-size: 1.8em;
+  margin: 15px 00px;
+  line-height: 1.1em;
+  -webkit-box-shadow: rgba(0, 0, 0, 0.398438) 0px 6px 6px 0px;
+  border: 1px solid #999999;
+  -webkit-user-select: none;
+  color: #666; /*  Option default */
+  padding: 10px 10px 10px 35px;
+  z-index: 10;
+  background: white;
+  border-radius: 3px;
+}
+
+article.state ul li[data-correct="true"] {
+  padding: 8px 10px 8px 35px;
+}
+
+
+
+article.state.intro .welcome, article.state.outro .thankyou{
+  vertical-align: middle;
+  text-align: center;
+  max-width: 102.3em;
+  margin: 0 auto;
+  background: white;
+  border: 2px solid #4f2d7f;
+  -webkit-border-top-right-radius: 20px;
+  -webkit-border-bottom-left-radius: 20px;
+  -moz-border-radius-topright: 20px;
+  -moz-border-radius-bottomleft: 20px;
+  border-top-right-radius: 20px;
+  border-bottom-left-radius: 20px;
+}
+
+article.state.intro h1, article.state.intro h2, article.state.outro h1, article.state.outro h2{
+  font-size: 5em;
+  background: none;
+  text-shadow: 0 0 5px gray;
+  color: #ec098d;
+  margin: 0px;
+  font-weight: bold;
+  padding: 1.9em 0;
+}
+
+@media only screen and (max-width: 1024px) {
+  article.state.intro .welcome, article.state.outro .thankyou{
+      max-width: 80em;
+  }
+  article.state.intro h1, article.state.intro h2, article.state.outro h1, article.state.outro h2{
+    font-size: 4em;
+    padding: 1.5em 0;
+  }
+}
+
+article.state.question{
+  text-align: left;
+  margin:auto;
+  padding-left:10%;
+}
+
+sup{
+  vertical-align:super;
+}
+sub {
+  vertical-align:sub;
+}
+
+article.state.answers.correct label[data-correct=false], article.state.answers.correct li[data-correct=false]{
+  opacity:0.4;
+}
+
+article.state.answers.correct li[data-correct=true]{
+  border: 1px solid #ec008c;/* Secondary default; */
+  color: #ec008c; /* TODO: Secondary default; */
+}
+
+article.state.answers.correct label[data-correct=true] {
+  background-color: #ec008c; /* TODO: Secondary default; */
+}
+
+article.state .logo {
+  position: absolute;
+  right: 50px;
+  bottom: 50px;
+  z-index: -1;
+}
+
+.question-explanation {
+  color: #4f2d7f; /*  Primary default */
+  padding: 25px 25px 25px 25px;
+  box-shadow: none;
+  font-size:1.8em;
+}
+
+.question-reference {
+  position:absolute;
+  bottom:50px;
+  left:50px;
+
+  max-width: 65%;
+
+  font-size: 12px;
+  font-family: "FrutigerRoman";
+  color: rgb( 118, 117, 121 );
+  line-height: 1.667;
+  text-shadow: 0.5px 0.866px 1px rgb( 255, 255, 255 )
+}
+
+.pause img{
+  margin:0 auto;
+  display: block;
+}
+
+article .counter{
+  margin:auto;
+  padding:auto;
+  vertical-align:center;
+  width:230px;
+  height:230px;
+  background: url('images/countdown_bg.png') no-repeat;
+  background-size:200px 200px;
+  background-position:center center;
+}
+
+article .counter h1{
+  position:relative;
+  color:#676767;
+  top:10%;
+  text-shadow: 10px 10px 20px #BBB;
+  vertical-align:center;
+  font-size:10em;
+  background: none;
+  border-radius: 0;
+  padding: 0px 0px 0px 78px;
+}
+
+article.state.loading .mejs-video {
+  opacity:0;
+}
+
+article.state.loading .loader {
+  width: 100%;
+  height: 100%;
+  background: url('images/loading.gif') center center no-repeat;
+}
+
+article.state.loading .loader {
+  display: block;
+}
+
+article.state .loader {
+  display: none;
+}
+
+.mejs-container {
+  margin: 0 auto;
+}
+
+article.state.pause.video {
+  padding:0;
+}
+ul.question-options{
+  position: relative;
+  top:50px;
+}
+
+article.countdown {
+  height: 100%;
+  width: 100%;
+}
+article.countdown table {
+  width: 100%;
+  height: 100%;
+  background: transparent;
+}
+
+article.countdown table tr, article.countdown table td {
+  background: transparent;
+}
+
+article.countdown table td {
+  background: transparent;
+  width: 50%;
+  height: 50%;
+  vertical-align: middle;
+  text-align: center;
+}
+
+article.countdown table td .counter h1 {
+  padding:0;
+}
+
+.mejs-container .mejs-controls {
+  display:none;
+}
